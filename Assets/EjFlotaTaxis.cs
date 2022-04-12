@@ -11,8 +11,6 @@ public class EjFlotaTaxis : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int precioxporlitro = 130;
-        int recorridodelitro = 15;
         float costototalcombustible;
         int kilometrostotalesdianormal;
         int kilometrostotaldiaslluvia;
@@ -28,7 +26,7 @@ public class EjFlotaTaxis : MonoBehaviour
         kilometrostotaldiaslluvia = diasdelluvia * 110 * cantidaddetaxis;
         cantidadtotaldediasengeneral = cantidadtotaldedias + diasdelluvia;
         preciodenaftadianormal = kilometrostotalesdianormal * 130;
-        preciodenaftadialluvia = kilometrostotaldiaslluvia * 130;
+        preciodenaftadialluvia = kilometrostotaldiaslluvia * litropordialluvia * 130;
         costototalcombustible = preciodenaftadialluvia + preciodenaftadialluvia;
 
         if (cantidadtotaldediasengeneral < 5)
